@@ -1,0 +1,100 @@
+<!DOCTYPE script>
+<head>
+<style>
+html{
+	background: url(http://www.headstartonhealthyliving.com/wp-content/uploads/2014/09/Road-at-the-foot-of-the-hope-in-the-distance-try-hard-1920x1440.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+container_top{
+}
+.container{
+	margin: auto;
+	width: 45%;
+	border: 3px solid #ADD8E6;
+  padding: 1px;
+	border-radius: 8px;
+	padding: 30px;
+	 background: url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSuIw5uohddhR6TIcEPS0oGijetLRfN2oJz15wMQgEVPz3psqJfyw) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.text{
+    width: 47%;
+    padding: 8px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+}
+.b{
+	margin: auto;
+    width: 30%;
+    padding: 30px 25px;
+
+}
+.button {
+    background-color: rgb(167, 45, 67);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 52px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<div class="container_top">
+	<h1 style="color:rgb(167, 45, 67;" align="left" ><a href="index.html">myallBills</a></h1>
+	<h2 style="color:#e61919;" align="center">Registration</h2>
+	</div>
+	<div class="container">
+	
+<div class= "map">
+<form id="map-form" action="registration.php" onsubmit="return myFunction()" method="post">
+  <div class="form_1">
+  <label for="Name" color="red"><font color="green"><b>Name:</b></font> </label><br><input type="text" size="5"  class= "text" placeholder="First Name" name="firstname" id="fName" width="5" height="8" required >
+  <input type="text" class= "text" name="lastname" placeholder="Last Name" id="lName" required><br>
+   <label for="User Name" color="red"><font color="green"><b>User Name:</b></font> </label><br><input type="text" class= "text" placeholder="UserName" name="username"id="username"required /><br>
+   <label for="Password" color="red"><font color="green"><b>Password: &nbsp</b></font> </label><br><input type="password" class= "text" placeholder="PassWord" name="password" id="pass1" required/><br>
+   <label for="conform_Password" color="red"><font color="green"><b>Conform Password:</b></font> </label><br><input type="password" class= "text" placeholder="Conform PassWord" id="pass2" required/> <label for="matchPassword" color="red" id="matchPassword"><font color="green"><b></b></font> </label><br>
+  <label for="E-mail" color="red"><font color="green"><b>E-mail</b></font> </label><br><input type="email" class= "text"  size="15" required placeholder="abc@example.com" name="email" id="email" required/><br>
+  <label for="Mobile #" color="red"><font color="green"><b>Mobile #: format(xxx-xxx-xxxx)</b></font> </label><br><input type="tel" pattern="^\d{3}-\d{3}-\d{4}$" class= "text" maxlength="12" size="12" name="mobile" required placeholder="xxx-xxx-xxxx" id="mobile" required/><br>
+  <input type="checkbox" name="agreement" value="agreement" required> I agree the terms and conditions<br>
+  </div>
+ <div class= "b">
+  <input type="submit" class="button" action="login.html" value="Submit" />
+  </div>
+  <h2 align="center"></h2>
+</div>
+</div>
+</form>
+<script>
+function myFunction() {
+    var pass1 = document.getElementById("pass1").value;
+    var pass2 = document.getElementById("pass2").value;
+    var ok = true;
+    if (pass1 != pass2) {
+        //alert("Passwords Do not match");
+        document.getElementById("pass1").style.borderColor = "#E34234";
+        document.getElementById("pass2").style.borderColor = "#E34234";
+        ok = false;
+		document.getElementById("matchPassword").innerHTML= "passwords do not match";
+    }
+    else {
+        document.getElementById("matchPassword").innerHTML= "passwords match";
+    }
+    return ok;
+}
+</script>
+</body>
